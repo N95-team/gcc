@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WTC Format</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .header-box {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 20px 40px;
+      border: 4px solid;
+      border-image: linear-gradient(90deg, #0ff, #a0f, #00f) 1;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.4);
+      animation: glowBox 2s infinite alternate, shake 3s infinite;
+    }
+
+    .header-box h1 {
+      font-size: 50px;
+      margin: 0;
+      background: linear-gradient(90deg, #0ff, #a0f, #00f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px #0ff, 0 0 80px #a0f;
+    }
+
+    @keyframes glowBox {
+      from { box-shadow: 0 0 30px #0ff, 0 0 60px #a0f; }
+      to { box-shadow: 0 0 60px #a0f, 0 0 120px #0ff; }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-2px); }
+    }
+
+    /* Definition */
+    .definition {
+      margin: 40px auto;
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ccc;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    /* Buttons row */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .btn {
+      margin: 15px;
+      padding: 15px 35px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: rgba(0,0,0,0.3);
+      border: 3px solid;
+      border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.4s;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      right: -12px;
+      bottom: -12px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      filter: blur(25px);
+      opacity: 0.6;
+      z-index: -1;
+      transition: 0.4s;
+    }
+
+    .btn:hover {
+      color: black;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      box-shadow: 0 0 40px #0ff, 0 0 80px #a0f;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="header-box">
+    <h1>WELCOME TO WTC FORMAT</h1>
+  </div>
+
+  <div class="definition">
+    <p>The World Test Championship (WTC) is the premier league for Test cricket.</p>
+    <p>It was introduced to bring context and competition to the longest format.</p>
+    <p>Teams play a set number of matches across a cycle of two years.</p>
+    <p>Points are awarded for wins, draws, and ties in each series.</p>
+    <p>The top two teams at the end qualify for the WTC Final.</p>
+    <p>The final decides the champion of Test cricket for that cycle.</p>
+    <p>It ensures Test cricket remains exciting, competitive, and global.</p>
+  </div>
+
+  <div class="buttons">
+    <a href="matches.html"><button class="btn">Matches</button></a>
+    <a href="points.html"><button class="btn">Points Table</button></a>
+    <a href="captains.html"><button class="btn">Captains</button></a>
+    <a href="teams.html"><button class="btn">Teams</button></a>
+    <a href="more.html"><button class="btn">More</button></a>
+  </div>
+</body>
+</html>
