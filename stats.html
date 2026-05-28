@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WTC Stats Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .fixture-btn {
+      display: block;
+      margin: 12px auto;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-family: 'Orbitron', sans-serif;
+      color: #0ff;
+      background: rgba(0,0,0,0.6);
+      border: 2px solid;
+      border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
+      border-radius: 10px;
+      text-align: center;
+      text-shadow: 0 0 15px #a0f;
+      cursor: pointer;
+      width: 70%;
+      transition: 0.3s;
+    }
+    .fixture-btn:hover {
+      background: rgba(0,255,255,0.1);
+      transform: scale(1.05);
+    }
+    .tag {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    .done { color: #00ff00; text-shadow: 0 0 10px #0f0; }
+    .pending { color: #ffaa00; text-shadow: 0 0 10px #ff0; }
+    .notyet { color: #ff4444; text-shadow: 0 0 10px #f00; }
+  </style>
+</head>
+<body>
+  <div class="header">📊 ICC WTC MATCH STATS</div>
+
+  <!-- Match Buttons -->
+  <a href="indvsaus.html"><div class="fixture-btn">India vs Australia <span class="tag done">✔ Completed</span></div></a>
+  <a href="savsen.html"><div class="fixture-btn">South Africa vs England <span class="tag pending">⏳ Pending</span></div></a>
+  <div class="fixture-btn">Afghanistan vs New Zealand <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">West Indies vs Bangladesh <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Sri Lanka vs Pakistan <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">New Zealand vs West Indies <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Bangladesh vs Afghanistan <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Australia vs Sri Lanka <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">England vs India <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">West Indies vs Pakistan <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Bangladesh vs South Africa <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">New Zealand vs Australia <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">West Indies vs Sri Lanka <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Afghanistan vs India <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">South Africa vs Pakistan <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Sri Lanka vs Bangladesh <span class="tag notyet">Not Yet Happened</span></div>
+  <div class="fixture-btn">Australia vs England <span class="tag notyet">Not Yet Happened</span></div>
+
+  <div class="buttons">
+    <a href="wtc.html"><button class="btn">Back to WTC</button></a>
+  </div>
+</body>
+</html>
