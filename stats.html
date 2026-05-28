@@ -6,10 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .stats-section {
+    .match-section {
       display: none;
-      margin: 40px auto;
-      width: 85%;
+      margin: 30px auto;
+      width: 90%;
       border: 3px solid;
       border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
       border-radius: 12px;
@@ -17,107 +17,119 @@
       padding: 20px;
       animation: fadeIn 1s ease forwards;
     }
-
-    .stats-section.active {
-      display: block;
-    }
-
+    .match-section.active { display: block; }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 18px;
+      font-size: 16px;
       color: #0ff;
       text-shadow: 0 0 15px #a0f;
     }
-
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #333;
-      text-align: center;
-    }
-
+    th, td { padding: 10px; border-bottom: 1px solid #333; text-align: center; }
     th {
       background: linear-gradient(90deg, #0ff, #a0f, #00f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 20px;
+      font-size: 18px;
     }
-
-    tr:hover {
-      background: rgba(0,255,255,0.1);
-      transition: 0.3s;
-      cursor: pointer;
-      transform: scale(1.02);
-    }
-
-    .switch-buttons {
-      margin: 20px;
-    }
-
-    .switch-buttons .btn {
-      margin: 10px;
-    }
+    tr:hover { background: rgba(0,255,255,0.1); transition: 0.3s; transform: scale(1.02); }
+    .switch-buttons { margin: 20px; }
+    .switch-buttons .btn { margin: 10px; }
   </style>
 </head>
 <body>
-  <div class="header">📊 WTC INDIA vs AUSTRALIA STATS</div>
+  <div class="header">🏏 WTC MATCH STATS</div>
 
+  <!-- Match Button -->
   <div class="switch-buttons">
-    <button class="btn" onclick="showSection('batting')">Australia Batting</button>
-    <button class="btn" onclick="showSection('bowling')">India Bowling</button>
-    <button class="btn" onclick="showSection('summary')">Match Summary</button>
+    <button class="btn" onclick="showMatch('india-aus')">India vs Australia</button>
   </div>
 
-  <!-- Batting Section -->
-  <div id="batting" class="stats-section active">
-    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">Australia Batting</h2>
-    <table>
-      <tr><th>Player</th><th>Runs (Balls)</th></tr>
-      <tr><td>Aaryan</td><td>58 (62)</td></tr>
-      <tr><td>Shaurya</td><td>2 (8)</td></tr>
-      <tr><td>Aash</td><td>4 (10)</td></tr>
-      <tr><td>Vignesh</td><td>16 (36)</td></tr>
-      <tr><td>Aki</td><td>0 (1)</td></tr>
-      <tr><td>Vishwa</td><td>7 (3)</td></tr>
-      <tr><td>Ayush</td><td>1 (2)</td></tr>
-    </table>
-  </div>
+  <!-- India vs Australia Match Section -->
+  <div id="india-aus" class="match-section">
+    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">India vs Australia</h2>
 
-  <!-- Bowling Section -->
-  <div id="bowling" class="stats-section">
-    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">India Bowling</h2>
-    <table>
-      <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
-      <tr><td>Adi</td><td>6</td><td>2/18</td></tr>
-      <tr><td>A. Jha</td><td>5</td><td>1/34</td></tr>
-      <tr><td>Naitik</td><td>7.2</td><td>2/29</td></tr>
-      <tr><td>Neerav</td><td>1</td><td>0/9</td></tr>
-    </table>
-  </div>
+    <!-- Innings Buttons -->
+    <div class="switch-buttons">
+      <button class="btn" onclick="showInnings('inn1')">1st Innings</button>
+      <button class="btn" onclick="showInnings('inn2')">2nd Innings</button>
+      <button class="btn" onclick="showInnings('inn3')">3rd Innings</button>
+      <button class="btn" onclick="showInnings('inn4')">4th Innings</button>
+    </div>
 
-  <!-- Summary Section -->
-  <div id="summary" class="stats-section">
-    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">Match Summary</h2>
-    <p><strong>Toss:</strong> Australia won the toss and chose to bat first.</p>
-    <p><strong>Runouts:</strong> 1 (Ayush)</p>
-    <p><strong>Extras:</strong> 2 NB</p>
-    <p><strong>Overs Played:</strong> 19.2</p>
-    <p><strong>Total Runs:</strong> 90</p>
-    <p><strong>Lead:</strong> 90</p>
-  </div>
+    <!-- 1st Innings -->
+    <div id="inn1" class="match-section active">
+      <h3>Australia Batting</h3>
+      <table>
+        <tr><th>Player</th><th>Runs (Balls)</th></tr>
+        <tr><td>Aaryan</td><td>58 (62)</td></tr>
+        <tr><td>Shaurya</td><td>2 (8)</td></tr>
+        <tr><td>Aash</td><td>4 (10)</td></tr>
+        <tr><td>Vignesh</td><td>16 (36)</td></tr>
+        <tr><td>Aki</td><td>0 (1)</td></tr>
+        <tr><td>Vishwa</td><td>7 (3)</td></tr>
+        <tr><td>Ayush</td><td>1 (2)</td></tr>
+      </table>
+      <h3>India Bowling</h3>
+      <table>
+        <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
+        <tr><td>Adi</td><td>6</td><td>2/18</td></tr>
+        <tr><td>A. Jha</td><td>5</td><td>1/34</td></tr>
+        <tr><td>Naitik</td><td>7.2</td><td>2/29</td></tr>
+        <tr><td>Neerav</td><td>1</td><td>0/9</td></tr>
+      </table>
+      <p><strong>Top Run Scorer:</strong> Aaryan (58)</p>
+      <p><strong>Best Bowler:</strong> Adi (2/18)</p>
+      <p><strong>Best Economy:</strong> Neerav (9.0 RPO)</p>
+    </div>
 
-  <div class="buttons">
-    <a href="wtc.html"><button class="btn">Back to WTC</button></a>
-    <a href="matches.html"><button class="btn">Matches</button></a>
-    <a href="points.html"><button class="btn">Points Table</button></a>
-    <a href="more.html"><button class="btn">More</button></a>
-  </div>
+    <!-- 2nd Innings -->
+    <div id="inn2" class="match-section">
+      <h3>India Batting</h3>
+      <table>
+        <tr><th>Player</th><th>Runs (Balls)</th></tr>
+        <tr><td>Naitik</td><td>23 (28)</td></tr>
+        <tr><td>Adi</td><td>14 (16)</td></tr>
+        <tr><td>Neerav</td><td>27 (25)</td></tr>
+        <tr><td>Kushagra</td><td>7 (15)</td></tr>
+        <tr><td>Darsh</td><td>0 (22)</td></tr>
+        <tr><td>A. Jha</td><td>5 (15)</td></tr>
+        <tr><td>Naitik (life)</td><td>*11 (24)*</td></tr>
+      </table>
+      <h3>Australia Bowling</h3>
+      <table>
+        <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
+        <tr><td>Aaryan</td><td>3</td><td>0/2</td></tr>
+        <tr><td>Shaurya</td><td>5</td><td>1/35</td></tr>
+        <tr><td>Akkie</td><td>6</td><td>1/23</td></tr>
+        <tr><td>Vishwa</td><td>1</td><td>1/12</td></tr>
+        <tr><td>Vignesh</td><td>1</td><td>1/3</td></tr>
+        <tr><td>Earth</td><td>1.3</td><td>0/4</td></tr>
+        <tr><td>Arsh</td><td>2</td><td>0/5</td></tr>
+      </table>
+      <p><strong>Top Run Scorer:</strong> Neerav (27)</p>
+      <p><strong>Best Bowler:</strong> Vignesh (1/3)</p>
+      <p><strong>Best Economy:</strong> Aaryan (0.67 RPO)</p>
+    </div>
 
-  <script>
-    function showSection(sectionId) {
-      document.querySelectorAll('.stats-section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(sectionId).classList.add('active');
-    }
-  </script>
-</body>
-</html>
+    <!-- 3rd Innings -->
+    <div id="inn3" class="match-section">
+      <h3>Australia Batting</h3>
+      <table>
+        <tr><th>Player</th><th>Runs (Balls)</th></tr>
+        <tr><td>Aaryan</td><td>154 (116)</td></tr>
+        <tr><td>Arsh</td><td>9 (17)</td></tr>
+        <tr><td>Vignesh</td><td>8 (23)</td></tr>
+        <tr><td>Faoth</td><td>5 (29)</td></tr>
+        <tr><td>Akkie</td><td>7 (6)</td></tr>
+        <tr><td>Vignesh (lite)</td><td>*8 (6)*</td></tr>
+        <tr><td>Ayush</td><td>2 (20)</td></tr>
+        <tr><td>Vishwa</td><td>*1 (6)*</td></tr>
+      </table>
+      <h3>India Bowling</h3>
+      <table>
+        <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
+        <tr><td>Adi</td><td>11</td><td>3/60</td></tr>
+        <tr><td>Naitik</td><td>14.4</td><td>3/55</td></tr>
+        <tr><td>A. Jha</td><td>3</td><td>0/32</td></tr>
+        <tr><td>Nees
