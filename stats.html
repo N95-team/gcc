@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WTC Match Stats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .stats-section {
+      display: none;
+      margin: 40px auto;
+      width: 85%;
+      border: 3px solid;
+      border-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet) 1;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .stats-section.active {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+      color: #0ff;
+      text-shadow: 0 0 15px #a0f;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+
+    th {
+      background: linear-gradient(90deg, #0ff, #a0f, #00f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 20px;
+    }
+
+    tr:hover {
+      background: rgba(0,255,255,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+
+    .switch-buttons {
+      margin: 20px;
+    }
+
+    .switch-buttons .btn {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">📊 WTC INDIA vs AUSTRALIA STATS</div>
+
+  <div class="switch-buttons">
+    <button class="btn" onclick="showSection('batting')">Australia Batting</button>
+    <button class="btn" onclick="showSection('bowling')">India Bowling</button>
+    <button class="btn" onclick="showSection('summary')">Match Summary</button>
+  </div>
+
+  <!-- Batting Section -->
+  <div id="batting" class="stats-section active">
+    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">Australia Batting</h2>
+    <table>
+      <tr><th>Player</th><th>Runs (Balls)</th></tr>
+      <tr><td>Aaryan</td><td>58 (62)</td></tr>
+      <tr><td>Shaurya</td><td>2 (8)</td></tr>
+      <tr><td>Aash</td><td>4 (10)</td></tr>
+      <tr><td>Vignesh</td><td>16 (36)</td></tr>
+      <tr><td>Aki</td><td>0 (1)</td></tr>
+      <tr><td>Vishwa</td><td>7 (3)</td></tr>
+      <tr><td>Ayush</td><td>1 (2)</td></tr>
+    </table>
+  </div>
+
+  <!-- Bowling Section -->
+  <div id="bowling" class="stats-section">
+    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">India Bowling</h2>
+    <table>
+      <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
+      <tr><td>Adi</td><td>6</td><td>2/18</td></tr>
+      <tr><td>A. Jha</td><td>5</td><td>1/34</td></tr>
+      <tr><td>Naitik</td><td>7.2</td><td>2/29</td></tr>
+      <tr><td>Neerav</td><td>1</td><td>0/9</td></tr>
+    </table>
+  </div>
+
+  <!-- Summary Section -->
+  <div id="summary" class="stats-section">
+    <h2 style="color:#0ff; text-shadow:0 0 20px #a0f;">Match Summary</h2>
+    <p><strong>Toss:</strong> Australia won the toss and chose to bat first.</p>
+    <p><strong>Runouts:</strong> 1 (Ayush)</p>
+    <p><strong>Extras:</strong> 2 NB</p>
+    <p><strong>Overs Played:</strong> 19.2</p>
+    <p><strong>Total Runs:</strong> 90</p>
+    <p><strong>Lead:</strong> 90</p>
+  </div>
+
+  <div class="buttons">
+    <a href="wtc.html"><button class="btn">Back to WTC</button></a>
+    <a href="matches.html"><button class="btn">Matches</button></a>
+    <a href="points.html"><button class="btn">Points Table</button></a>
+    <a href="more.html"><button class="btn">More</button></a>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.stats-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
