@@ -132,4 +132,56 @@
         <tr><td>Adi</td><td>11</td><td>3/60</td></tr>
         <tr><td>Naitik</td><td>14.4</td><td>3/55</td></tr>
         <tr><td>A. Jha</td><td>3</td><td>0/32</td></tr>
-        <tr><td>Nees
+                <tr><td>Neesav</td><td>5</td><td>0/46</td></tr>
+        <tr><td>Darsh</td><td>1</td><td>0/11</td></tr>
+        <tr><td>Kushagra</td><td>1</td><td>0/3</td></tr>
+      </table>
+      <p><strong>Top Run Scorer:</strong> Aaryan (154)</p>
+      <p><strong>Best Bowler:</strong> Adi & Naitik (3 wickets each)</p>
+      <p><strong>Best Economy:</strong> Kushagra (3.0 RPO)</p>
+      <p><strong>Total:</strong> 216 | Target set: 218</p>
+    </div>
+
+    <!-- 4th Innings -->
+    <div id="inn4" class="match-section">
+      <h3>India Batting</h3>
+      <table>
+        <tr><th>Player</th><th>Runs (Balls)</th></tr>
+        <tr><td>A. Jha</td><td>8 (24)</td></tr>
+        <tr><td>Naitik</td><td>50 (71)</td></tr>
+        <tr><td>Adi</td><td>18 (15)</td></tr>
+        <tr><td>Kushagra</td><td>7 (13)</td></tr>
+        <tr><td>Paash</td><td>13 (13)</td></tr>
+        <tr><td>Neerav</td><td>*25 (19)*</td></tr>
+        <tr><td>Aarav</td><td>5 (7)</td></tr>
+      </table>
+      <h3>Australia Bowling</h3>
+      <table>
+        <tr><th>Bowler</th><th>Overs</th><th>Figures</th></tr>
+        <tr><td>Aaryan</td><td>11</td><td>2/40</td></tr>
+        <tr><td>Aksil</td><td>6.1</td><td>1/28</td></tr>
+        <tr><td>Eash</td><td>2</td><td>0/7</td></tr>
+        <tr><td>Vignesh</td><td>3</td><td>0/26</td></tr>
+        <tr><td>Aash</td><td>2</td><td>1/18</td></tr>
+        <tr><td>Vishwa</td><td>2</td><td>1/14</td></tr>
+      </table>
+      <p><strong>Top Run Scorer:</strong> Naitik (50)</p>
+      <p><strong>Best Bowler:</strong> Aaryan (2/40)</p>
+      <p><strong>Best Economy:</strong> Eash (3.5 RPO)</p>
+      <p><strong>Total:</strong> 131 | Result: Australia won by 87 runs</p>
+    </div>
+  </div>
+
+  <script>
+    function showMatch(matchId) {
+      document.querySelectorAll('.match-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(matchId).classList.add('active');
+    }
+    function showInnings(innId) {
+      document.querySelectorAll('#india-aus .match-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(innId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
